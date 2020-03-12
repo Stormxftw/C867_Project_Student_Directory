@@ -1,20 +1,24 @@
-#pragma once
+#ifndef STUDENT_H
+#define STUDENT_H
 
 
-class Student
-{
+#include <iostream>
+using namespace std;
+
+class Student {
+
 public:
-	Student();
-	~Student();
+	void getStudentId(int id);
 
 private:
+	int studentID;
+	string firstName;
+	string lastName;
+	string emailAddress;
+	int age;
+	int daysToComplete{};
 
 };
 
-Student::Student()
-{
-}
 
-Student::~Student()
-{
-}
+#endif // !
