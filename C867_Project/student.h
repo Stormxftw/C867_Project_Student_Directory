@@ -8,8 +8,17 @@ using namespace std;
 class Student {
 
 public:
-	void getStudentId(int id);
 
+	//Mutators
+	void setStudentId(int id);
+	void setFirstName(string FirstName);
+	void setLastName(string LastName);
+
+
+	//Accessors
+	int getStudentId() const;
+	string getFirstName() const;
+	string getLastName() const;
 private:
 	int studentID;
 	string firstName;
