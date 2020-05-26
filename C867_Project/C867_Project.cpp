@@ -1,12 +1,11 @@
 // C867_Project.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
+#include "student.h"
 #include <iostream>
 
-int main()
-{
-    std::cout << "Hello World!\n";
-}
+using namespace std;
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
