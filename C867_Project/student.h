@@ -1,7 +1,7 @@
 #ifndef STUDENT_H
 #define STUDENT_H
 
-#include "securityStudent.h"
+
 #include <iostream>
 #include <array>
 #include <string>
@@ -16,7 +16,7 @@ protected:
 	string emailAddress;
 	int age;
 	int daystoComplete[3];
-	Degree DegreeType;
+	
 
 public:
 	//default constructor
@@ -35,7 +35,7 @@ public:
 	int getDaysToComplete() const;
 
 	//Virtual getDegreeProgram 2.f
-	virtual Degree getDegreePlan() const;
+	virtual Degree getDegreePlan() const = 0; // This caused the Student class to become an Abstract Class
 
 	//Mutators
 	void setStudentId(string id);

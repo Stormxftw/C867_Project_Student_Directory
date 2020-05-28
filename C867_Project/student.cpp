@@ -21,6 +21,11 @@ Student::Student() {
 	
 }
 
+Student::~Student()
+{
+	
+}
+
 //Accessors
 string Student::getStudentId() const {
 	return studentID;
@@ -45,6 +50,8 @@ int Student::getAge() const {
 int Student::getDaysToComplete() const {
 	return daystoComplete[3];
 }
+
+
 //Mutators
 void Student::setStudentId(string id) {
 	studentID = id;

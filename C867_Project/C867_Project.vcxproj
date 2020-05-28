@@ -154,7 +154,7 @@
     <ClCompile Include="C867_Project.cpp" />
     <ClCompile Include="networkStudent.cpp" />
     <ClCompile Include="roster.cpp" />
-    <ClCompile Include="securityStudent.cpp" />
+    <ClCompile Include="SecurityStudent.cpp" />
     <ClCompile Include="softwareStudent.cpp" />
     <ClCompile Include="student.cpp" />
   </ItemGroup>
@@ -162,7 +162,7 @@
     <ClInclude Include="degree.h" />
     <ClInclude Include="networkStudent.h" />
     <ClInclude Include="roster.h" />
-    <ClInclude Include="securityStudent.h" />
+    <ClInclude Include="SecurityStudent.h" />
     <ClInclude Include="softwareStudent.h" />
     <ClInclude Include="student.h" />
   </ItemGroup>
