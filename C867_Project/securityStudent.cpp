@@ -3,15 +3,27 @@
 
 SecurityStudent::SecurityStudent() : Student()
 {
-	this->DegreeType = SECURITY;
+	
 }
 
 SecurityStudent::~SecurityStudent()
 {
-	delete otherStudent;
+	
 }
 
+//Accessors
 Degree SecurityStudent::getDegreePlan() const
 {
-	return this->DegreeType;
+	return DegreeType;
+}
+
+//Mutators
+void SecurityStudent::print()
+{
+	cout << "SECURITY" << endl;
+}
+
+void SecurityStudent::setDegreePlan(Degree degree)
+{
+	this->DegreeType = SECURITY;
 }

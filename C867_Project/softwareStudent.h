@@ -1,18 +1,14 @@
-#ifndef SOFTWARESTUDENT_H
-#define SOFTWARESTUDENT_H
-#include <iostream>
-#include <array>
-#include <string>
+#pragma once
 #include "student.h"
-using namespace std;
-
-class softwareStudent : Student
+class SoftwareStudent :
+	public Student
 {
 private:
-	Degree degree;
+	Degree DegreeType;
 public:
-	Degree getDegreeProgram() const;
+	SoftwareStudent();
+	~SoftwareStudent();
 
+	Degree getDegreePlan() const override;
 };
 
-#endif

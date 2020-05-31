@@ -1,18 +1,14 @@
-#ifndef NETWORKSTUDENT_H
-#define NETWORKSTUDENT_H
-#include <iostream>
-#include <array>
-#include <string>
+#pragma once
 #include "student.h"
-using namespace std;
-
-class networkStudent : Student 
+class NetworkStudent :
+	public Student
 {
 private:
-	Degree degree;
+	Degree DegreeType;
 public:
-	Degree getDegreeProgram() const;
+	NetworkStudent();
+	~NetworkStudent();
 
+	Degree getDegreePlan() const override;
 };
 
-#endif

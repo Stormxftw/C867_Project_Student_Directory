@@ -43,9 +43,9 @@ public:
 	void setLastName(string LastName);
 	void setEmailAddress(string EmailAddress);
 	void setAge(int Age);
-	void setDaysToComplete(const int* daystoComplete);
+	void setDaysToComplete(int* daystoComplete);
 	//Virtual print to print specific data 2.d
-	virtual void print();
+	virtual void print() = 0;
 	
 
 

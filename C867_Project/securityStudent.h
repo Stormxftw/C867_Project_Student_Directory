@@ -7,12 +7,18 @@ private:
 	Degree DegreeType;
 	
 public:
-	
+	//Default constructor
 	SecurityStudent();
+	//Desctructor
 	~SecurityStudent();
 	
+	//Accessor
 	Degree getDegreePlan() const override;
 
-	Student* otherStudent;
+	//Mutators
+	void setDegreePlan(Degree degree);
+	void print();
+
+	
 };
 
