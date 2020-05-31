@@ -3,7 +3,7 @@
 
 SecurityStudent::SecurityStudent() : Student()
 {
-	
+	this->DegreeType = SECURITY;
 }
 
 SecurityStudent::~SecurityStudent()
@@ -20,7 +20,12 @@ Degree SecurityStudent::getDegreePlan() const
 //Mutators
 void SecurityStudent::print()
 {
-	cout << "SECURITY" << endl;
+	cout << "StudentID: " << studentID << endl;
+	cout << "First Name: " << firstName << endl;
+	cout << "Last Name: " << lastName << endl;
+	cout << "Email address: " << emailAddress << endl;
+	cout << "Age: " << age << endl;
+	cout << "Degree program: SECURITY" << endl;
 }
 
 void SecurityStudent::setDegreePlan(Degree degree)

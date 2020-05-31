@@ -1,9 +1,11 @@
+
 #include "student.h"
 #include <iostream>
 #include <array>
 #include <string>
 #include <cstring>
 #include "securityStudent.h"
+#include "networkStudent.h"
 #include <vector>
 #include <sstream>
 
@@ -73,6 +75,21 @@ int main()
 		
 		}
 
+		if (degree == "NETWORK")
+		{
+
+			classRosterArray[i] = new NetworkStudent();
+			classRosterArray[i]->setStudentId(id);
+			classRosterArray[i]->setFirstName(fn);
+			classRosterArray[i]->setLastName(ln);
+			classRosterArray[i]->setEmailAddress(em);
+			classRosterArray[i]->setAge(age);
+			/*classRosterArray[i]->setDaysToComplete(days);*/
+			classRosterArray[i]->getDegreePlan();
+
+
+		}
+
 
 		//Parse studentInfo
 		//Set the degree type from parsing the string to object Degree
@@ -88,9 +105,11 @@ int main()
 		///
 		/////Call the setters after the object is created
 		//////classRosterArray[i].setStudentId(studentId);
+
+		classRosterArray[i]->print();
 	}
 
-	classRosterArray[0]->print();
+	
 
 	//Student* student = new SecurityStudent();
 

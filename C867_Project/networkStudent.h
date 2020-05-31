@@ -6,9 +6,18 @@ class NetworkStudent :
 private:
 	Degree DegreeType;
 public:
+	//Default constructor
 	NetworkStudent();
+
+	//Deconstructor
 	~NetworkStudent();
 
+
+	//Accessor
 	Degree getDegreePlan() const override;
+
+	//Mutators
+	void setDegreePlan(Degree degree);
+	void print();
 };
 
