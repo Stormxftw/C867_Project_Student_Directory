@@ -4,11 +4,11 @@ class SoftwareStudent :
 	public Student
 {
 private:
-	Degree DegreeType;
+	Degree DegreeType = SOFTWARE;
 public:
-	SoftwareStudent();
-	~SoftwareStudent();
+	using Student::Student;
+	//Accessor
+	Degree getDegreePlan() override;
 
-	Degree getDegreePlan() const override;
 };
 

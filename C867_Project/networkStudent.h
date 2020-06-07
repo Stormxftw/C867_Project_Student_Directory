@@ -4,20 +4,13 @@ class NetworkStudent :
 	public Student
 {
 private:
-	Degree DegreeType;
+	Degree DegreeType = NETWORKING;
 public:
-	//Default constructor
-	NetworkStudent();
-
-	//Deconstructor
-	~NetworkStudent();
-
-
+	Student::Student;
 	//Accessor
-	Degree getDegreePlan() const override;
+	Degree getDegreePlan() override;
 
-	//Mutators
-	void setDegreePlan(Degree degree);
-	void print();
+	NetworkStudent(string student_id, string first_name, string last_name, string email_address, int age, int days[3],
+	               Degree degree);
 };
 

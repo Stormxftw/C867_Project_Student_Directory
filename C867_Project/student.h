@@ -1,5 +1,4 @@
-#ifndef STUDENT_H
-#define STUDENT_H
+#pragma once
 
 
 #include <iostream>
@@ -15,27 +14,26 @@ protected:
 	string lastName;
 	string emailAddress;
 	int age;
-	int daystoComplete[3];
-	
+	int* daystoComplete[3];
+	Degree DegreeType;
 
 public:
 	//default constructor
-	Student();
+	Student(string studentID, string firstName, string lastName, string emailAddress, int age, int daystoComplete[3], Degree degree);
 
 	//destructor
 	~Student();
 
-
 	//Accessors
-	string getStudentId() const;
-	string getFirstName() const;
-	string getLastName() const;
-	string getEmailAddress() const;
-	int getAge() const;
-	int getDaysToComplete() const;
+	string getStudentId();
+	string getFirstName();
+	string getLastName();
+	string getEmailAddress();
+	int getAge();
+	int* getDaysToComplete();
 
 	//Virtual getDegreeProgram 2.f
-	virtual Degree getDegreePlan() const = 0; // This caused the Student class to become an Abstract Class
+	virtual Degree getDegreePlan() = 0;
 
 	//Mutators
 	void setStudentId(string id);
@@ -43,13 +41,13 @@ public:
 	void setLastName(string LastName);
 	void setEmailAddress(string EmailAddress);
 	void setAge(int Age);
-	void setDaysToComplete(int* daystoComplete);
+	void setDaysToComplete(int* days[]);
+
 	//Virtual print to print specific data 2.d
-	virtual void print() = 0;
+	virtual void print();
 	
 
 
 
 };
 
-#endif 

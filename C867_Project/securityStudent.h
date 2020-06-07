@@ -4,20 +4,13 @@ class SecurityStudent :
     public Student
 {
 private:
-	Degree DegreeType;
+	Degree DegreeType = SECURITY;
 	
 public:
-	//Default constructor
-	SecurityStudent();
-	//Desctructor
-	~SecurityStudent();
-	
-	//Accessor
-	Degree getDegreePlan() const override;
 
-	//Mutators
-	void setDegreePlan(Degree degree);
-	void print();
+	using Student::Student;
+
+	Degree getDegreePlan() override;
 
 	
 };

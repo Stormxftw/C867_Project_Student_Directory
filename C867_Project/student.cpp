@@ -1,53 +1,34 @@
 
-#include <iostream>
-#include <array>
+
 #include <string>
 #include "student.h"
 
 
 using namespace std;
 
-//Constructor
-Student::Student() {
-	studentID = "no id";
-	firstName = "no first name";
-	lastName = "no last name";
-	emailAddress = "no email address";
-	age = 1;
-	for (int i = 0; i < 3; i++)
-	{
-		daystoComplete[i] = 1;
-	};
-	
-}
-
-Student::~Student()
-{
-	
-}
 
 //Accessors
-string Student::getStudentId() const {
+string Student::getStudentId()  {
 	return studentID;
 }
 
-string Student::getFirstName() const {
+string Student::getFirstName()  {
 	return firstName;
 }
 
-string Student::getLastName() const {
+string Student::getLastName()  {
 	return lastName;
 }
 
-string Student::getEmailAddress() const {
+string Student::getEmailAddress()  {
 	return emailAddress;
 }
 
-int Student::getAge() const {
+int Student::getAge()  {
 	return age;
 }
 
-int Student::getDaysToComplete() const {
+int* Student::getDaysToComplete()  {
 	return daystoComplete[3];
 }
 
@@ -75,16 +56,37 @@ void Student::setAge(int Age) {
 	age = Age;
 }
 
-//void Student::setDegreeProgram(string Degree) {
-//	degree = Degree;
-//}
+void Student::setDaysToComplete(int* days[]) {
+	for (int i = 0; i < 3; i++) {
+		daystoComplete[i] = days[i];
+	}
+}
+
 
 void Student::print()
 {
+	string degreePrint;
+	if (this->DegreeType == SECURITY)
+	{
+		degreePrint = "Security";
+	}
+	if (this->DegreeType == NETWORKING)
+	{
+		degreePrint = "Networking";
+	}
+	if (this->DegreeType == SOFTWARE)
+	{
+		degreePrint = "Software";
+	}
+
 	cout << "StudentID: " <<  studentID << endl;
-	cout << "First Name" << firstName << endl;
-	cout << "Last Name" << lastName << endl;
+	cout << "First Name: " << firstName << endl;
+	cout << "Last Name: " << lastName << endl;
 	cout << "Email address: " << emailAddress << endl;
 	cout << "Age: " << age << endl;
+	cout << "Degree Program: " << degreePrint << endl;
 }
 
+Student::~Student() {
+
+}
