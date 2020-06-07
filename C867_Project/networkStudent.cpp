@@ -5,4 +5,3 @@ Degree NetworkStudent::getDegreePlan()
 {
 	return DegreeType;
 }
-

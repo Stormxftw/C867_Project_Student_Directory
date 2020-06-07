@@ -5,7 +5,8 @@
 #include "degree.h"
 using namespace std;
 
-class Student {
+class Student
+{
 protected:
 	string studentID;
 	string firstName;
@@ -17,7 +18,8 @@ protected:
 
 public:
 	//default constructor
-	Student(string studentID, string firstName, string lastName, string emailAddress, int age, int daystoComplete[3], Degree degree);
+	Student(string studentID, string firstName, string lastName, string emailAddress, int age, int daystoComplete[3],
+	        Degree degree);
 
 	//destructor
 	~Student();
@@ -32,7 +34,7 @@ public:
 
 	//Virtual getDegreeProgram 2.f
 	virtual Degree getDegreePlan() = 0;
-	
+
 
 	//Mutators
 	void setStudentId(string id);
@@ -45,9 +47,4 @@ public:
 
 	//Virtual print to print specific data 2.d
 	virtual void print();
-	
-
-
-
 };
-

@@ -18,7 +18,7 @@ void main()
 	cout << endl;
 	Roster* classRoster = new Roster();
 
-	
+
 	const string studentData[] =
 	{
 		"A1,John,Smith,John1989@gm ail.com,20,30,35,40,SECURITY",
@@ -59,7 +59,7 @@ void main()
 		classRoster->Add(line.at(0), line.at(1), line.at(2), line.at(3), stoi(line.at(4)), stoi(line.at(5)),
 		                 stoi(line.at(6)), stoi(line.at(7)), degree);
 	}
-	
+
 
 	cout << "All Students in this Class Roster:" << endl;
 	classRoster->PrintAll();
@@ -83,7 +83,6 @@ void main()
 	cout << "Removing students from roster:" << endl;
 	classRoster->Remove("A3");
 	classRoster->Remove("A3");
-	
 }
 
 Roster::~Roster()
@@ -125,10 +124,10 @@ void Roster::Remove(string studentID)
 	int i = 0;
 	bool found = false;
 
-	while (i < 5) {
-
-		if (ClassRosterArray[i] != nullptr && ClassRosterArray[i]->getStudentId() == studentID) {
-
+	while (i < 5)
+	{
+		if (ClassRosterArray[i] != nullptr && ClassRosterArray[i]->getStudentId() == studentID)
+		{
 			ClassRosterArray[i] = nullptr;
 
 			found = true;
@@ -139,7 +138,8 @@ void Roster::Remove(string studentID)
 		i++;
 	}
 
-	if (found == false) {
+	if (found == false)
+	{
 		cout << "Error: Student not found." << endl;
 	}
 }

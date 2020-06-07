@@ -1,7 +1,6 @@
 #include "SoftwareStudent.h"
 //Accessor
-Degree SoftwareStudent::getDegreePlan() 
+Degree SoftwareStudent::getDegreePlan()
 {
 	return this->DegreeType;
 }
-

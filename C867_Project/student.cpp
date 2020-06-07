@@ -1,5 +1,3 @@
-
-
 #include <string>
 #include "student.h"
 
@@ -8,56 +6,67 @@ using namespace std;
 
 
 //Accessors
-string Student::getStudentId()  {
+string Student::getStudentId()
+{
 	return studentID;
 }
 
-string Student::getFirstName()  {
+string Student::getFirstName()
+{
 	return firstName;
 }
 
-string Student::getLastName()  {
+string Student::getLastName()
+{
 	return lastName;
 }
 
-string Student::getEmailAddress()  {
+string Student::getEmailAddress()
+{
 	return emailAddress;
 }
 
-int Student::getAge()  {
+int Student::getAge()
+{
 	return age;
 }
 
-int* Student::getDaysToComplete()  {
+int* Student::getDaysToComplete()
+{
 	return daystoComplete;
 }
 
 
 //Mutators
-void Student::setStudentId(string id) {
+void Student::setStudentId(string id)
+{
 	studentID = id;
-	
 }
 
-void Student::setFirstName(string FirstName) {
+void Student::setFirstName(string FirstName)
+{
 	firstName = FirstName;
-	
 }
 
-void Student::setLastName(string LastName) {
+void Student::setLastName(string LastName)
+{
 	lastName = LastName;
 }
 
-void Student::setEmailAddress(string EmailAddress) {
+void Student::setEmailAddress(string EmailAddress)
+{
 	emailAddress = EmailAddress;
 }
 
-void Student::setAge(int Age) {
+void Student::setAge(int Age)
+{
 	age = Age;
 }
 
-void Student::setDaysToComplete(int days[]) {
-	for (int i = 0; i < 3; i++) {
+void Student::setDaysToComplete(int days[])
+{
+	for (int i = 0; i < 3; i++)
+	{
 		daystoComplete[i] = days[i];
 	}
 }
@@ -85,10 +94,14 @@ void Student::print()
 		degreePrint = "Software";
 	}
 
-	cout << "StudentID:    " <<  getStudentId() << "	First Name:    " << getFirstName() << "	Last Name:    " << getLastName() << "	Email address:    " << getEmailAddress() << "	Age:    " << getAge() << "	Days in course:    " << days[0] << "," << days[1] << "," << days[2] <<  "	Degree Program:    " << degreePrint << endl;
+	cout << "StudentID:    " << getStudentId() << "	First Name:    " << getFirstName() << "	Last Name:    " <<
+		getLastName() << "	Email address:    " << getEmailAddress() << "	Age:    " << getAge() << "	Days in course:    "
+		<< days[0] << "," << days[1] << "," << days[2] << "	Degree Program:    " << degreePrint << endl;
 }
 
-Student::Student(string newStudentID, string newFirstName, string newLastName, string newEmail, int newAge, int newDaysToCompleteCourse[3], Degree newDegree) {
+Student::Student(string newStudentID, string newFirstName, string newLastName, string newEmail, int newAge,
+                 int newDaysToCompleteCourse[3], Degree newDegree)
+{
 	setStudentId(newStudentID);
 	setFirstName(newFirstName);
 	setLastName(newLastName);
@@ -98,6 +111,6 @@ Student::Student(string newStudentID, string newFirstName, string newLastName, s
 	SetDegreeProgram(newDegree);
 }
 
-Student::~Student() {
-
+Student::~Student()
+{
 }
