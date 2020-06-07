@@ -29,7 +29,7 @@ int Student::getAge()  {
 }
 
 int* Student::getDaysToComplete()  {
-	return daystoComplete[3];
+	return daystoComplete;
 }
 
 
@@ -56,15 +56,21 @@ void Student::setAge(int Age) {
 	age = Age;
 }
 
-void Student::setDaysToComplete(int* days[]) {
+void Student::setDaysToComplete(int days[]) {
 	for (int i = 0; i < 3; i++) {
 		daystoComplete[i] = days[i];
 	}
 }
 
+void Student::SetDegreeProgram(Degree degree)
+{
+	DegreeType = degree;
+}
+
 
 void Student::print()
 {
+	int* days = getDaysToComplete();
 	string degreePrint;
 	if (this->DegreeType == SECURITY)
 	{
@@ -79,12 +85,17 @@ void Student::print()
 		degreePrint = "Software";
 	}
 
-	cout << "StudentID: " <<  studentID << endl;
-	cout << "First Name: " << firstName << endl;
-	cout << "Last Name: " << lastName << endl;
-	cout << "Email address: " << emailAddress << endl;
-	cout << "Age: " << age << endl;
-	cout << "Degree Program: " << degreePrint << endl;
+	cout << "StudentID:    " <<  getStudentId() << "	First Name:    " << getFirstName() << "	Last Name:    " << getLastName() << "	Email address:    " << getEmailAddress() << "	Age:    " << getAge() << "	Days in course:    " << days[0] << "," << days[1] << "," << days[2] <<  "	Degree Program:    " << degreePrint << endl;
+}
+
+Student::Student(string newStudentID, string newFirstName, string newLastName, string newEmail, int newAge, int newDaysToCompleteCourse[3], Degree newDegree) {
+	setStudentId(newStudentID);
+	setFirstName(newFirstName);
+	setLastName(newLastName);
+	setEmailAddress(newEmail);
+	setAge(newAge);
+	setDaysToComplete(newDaysToCompleteCourse);
+	SetDegreeProgram(newDegree);
 }
 
 Student::~Student() {

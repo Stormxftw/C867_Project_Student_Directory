@@ -2,8 +2,6 @@
 
 
 #include <iostream>
-#include <array>
-#include <string>
 #include "degree.h"
 using namespace std;
 
@@ -14,7 +12,7 @@ protected:
 	string lastName;
 	string emailAddress;
 	int age;
-	int* daystoComplete[3];
+	int daystoComplete[3];
 	Degree DegreeType;
 
 public:
@@ -34,6 +32,7 @@ public:
 
 	//Virtual getDegreeProgram 2.f
 	virtual Degree getDegreePlan() = 0;
+	
 
 	//Mutators
 	void setStudentId(string id);
@@ -41,7 +40,8 @@ public:
 	void setLastName(string LastName);
 	void setEmailAddress(string EmailAddress);
 	void setAge(int Age);
-	void setDaysToComplete(int* days[]);
+	void setDaysToComplete(int days[]);
+	void SetDegreeProgram(Degree degree);
 
 	//Virtual print to print specific data 2.d
 	virtual void print();

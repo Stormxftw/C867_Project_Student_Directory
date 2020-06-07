@@ -3,12 +3,14 @@
 class SoftwareStudent :
 	public Student
 {
-private:
-	Degree DegreeType = SOFTWARE;
+
 public:
 	using Student::Student;
 	//Accessor
-	Degree getDegreePlan() override;
+	Degree getDegreePlan();
+
+private:
+	Degree DegreeType = SOFTWARE;
 
 };
 
